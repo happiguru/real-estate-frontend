@@ -7,7 +7,7 @@ const Apartment = ({
     apartment
 }) => (
     <div className="col-xl-4 col-lg-3 col-md-6" key={apartment.id}>
-        <Link to={`/${apartment.id}`}>
+        <Link to={`/apartments/${apartment.id}`}>
             <div className="single_recipe text-center">
                 <div className="recepie_thumb">
                     <img src={apartment.apartmentimg} alt="hello" />

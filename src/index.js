@@ -7,6 +7,7 @@ import ApartmentItems from './containers/ApartmentItems';
 import ApartmentDetail from './components/ApartmentDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LoginForm from './components/LoginForm';
 import reportWebVitals from './reportWebVitals';
 import store from './store/store';
 
@@ -17,8 +18,9 @@ ReactDOM.render(
         <Header />
         <div className="main-container">
           <Switch>
-            <Route exact path="/" component={ApartmentItems} />
-            <Route exact path="/:id" component={ApartmentDetail} />
+          <Route exact path="/" component={LoginForm} />
+            <Route exact path="/apartments" component={ApartmentItems} />
+            <Route exact path="/apartments/:id" component={ApartmentDetail} />
           </Switch>
         </div>
         <Footer />

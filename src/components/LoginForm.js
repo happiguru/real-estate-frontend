@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const UsersForm = ({ handleSubmit, btnName }) => {
+const LoginForm = ({ handleSubmit, btnName }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -46,4 +46,4 @@ UsersForm.defaultProps = {
   btnName: 'Save',
 };
 
-export default UsersForm;
+export default LoginForm;

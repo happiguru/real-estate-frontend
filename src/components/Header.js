@@ -17,9 +17,13 @@ const Header = () => (
             </div>
             <div className="col-xl-6 col-lg-7">
               <div className="main-menu white_text  d-none d-lg-block">
-                <nav>
+                <nav className="d-flex">
                   <ul id="navigation">
-                    <li><Link to="/">Find A Home For Yourself!!</Link></li>
+                    <li><Link to="/apartments">Find A Home For Yourself!!</Link></li>
+                  </ul>
+                  <ul>
+                    <Link to="/login" className="btn mb-2">Sign In</Link>
+                    <Link to="/signup" className="btn mb-2">Sign Up</Link>
                   </ul>
                 </nav>
               </div>
