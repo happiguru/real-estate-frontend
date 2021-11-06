@@ -1,33 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ApartmentItems from './containers/ApartmentItems';
-import ApartmentDetail from './components/ApartmentDetail';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import LoginForm from './components/LoginForm';
-import reportWebVitals from './reportWebVitals';
-import store from './store/store';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import createStore from './store/createStore';
+
+const store = createStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <Header />
-        <div className="main-container">
-          <Switch>
-          <Route exact path="/" component={LoginForm} />
-            <Route exact path="/apartments" component={ApartmentItems} />
-            <Route exact path="/apartments/:id" component={ApartmentDetail} />
-          </Switch>
-        </div>
-        <Footer />
-      </Router>
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
-reportWebVitals();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
