@@ -15,7 +15,7 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         <Header />
-        <div className="container">
+        <div className="main-container">
           <Switch>
             <Route exact path="/" component={ApartmentItems} />
             <Route exact path="/:id" component={ApartmentDetail} />

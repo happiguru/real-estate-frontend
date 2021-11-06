@@ -1,42 +1,25 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import '../styles/Apartment.css';
 
 
 const Apartment = ({
-    id,
-    apartmentId,
-    apartment_name,
-    city,
-    address,
-    description_short,
-    description_long,
-    price,
+    apartment
 }) => (
-    <div className="col-xl-4 col-lg-3 col-md-6" key={id}>
-        <Link to={`/${id}`}>
-            <div>
-                <h3>{apartment_name}</h3>
-                <h3>{apartmentId}</h3>
-                <h3>{city}</h3>
-                <h3>{address}</h3>
-                <h3>{description_short}</h3>
-                <h3>{description_long}</h3>
-                <h3>{price}</h3>
+    <div className="col-xl-4 col-lg-3 col-md-6" key={apartment.id}>
+        <Link to={`/${apartment.id}`}>
+            <div className="single_recipe text-center">
+                <div className="recepie_thumb">
+                    <img src={apartment.apartmentimg} alt="hello" />
+                </div>
+                <h3>{apartment.apartment_name}</h3>
+                <span>Price: {apartment.price}</span>
+                <p>City: {apartment.city}</p>
+                <p>Address: {apartment.address}</p>
+                <p>Description: {apartment.description_short}</p>
             </div>
         </Link>
     </div>
 );
-
-Apartment.propTypes = {
-    id: PropTypes.number.isRequired,
-    apartmentId: PropTypes.string.isRequired,
-    apartment_name: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    address: PropTypes.string.isRequired,
-    description_short: PropTypes.string.isRequired,
-    description_long: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-}
 
 export default Apartment;

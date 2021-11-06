@@ -7,14 +7,7 @@ const ApartmentsList = ({ apartmentData, filterData }) => {
         const f = apartments.map((apartment) => (
             <Apartment
               key={apartment.id}
-              id={apartment.id}
-              apartmentId={apartment.apartmentId}
-              apartment_name={apartment.apartment_name}
-              city={apartment.city}
-              address={apartment.address}
-              description_short={apartment.description_short}
-              description_long={apartment.description_long}
-              price={apartment.price}
+              apartment={apartment}
             />
         ));
         return f;
@@ -27,7 +20,7 @@ const ApartmentsList = ({ apartmentData, filterData }) => {
     return (
         <>
             <div className="col-xl-12">
-                <div className="text-center">
+                <div className="bradcam_text text-center">
                     <h3 className="py-4">Apartment Lists</h3>
                 </div>
             </div>

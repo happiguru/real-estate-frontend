@@ -6,8 +6,8 @@ import FilterApartments from "../components/FilterApartment";
 import { loadApartments, setFilter } from "../actions";
 
 const ApartmentItems = () => {
-    const filter = useSelector((state) => state.filter);
     const dispatch = useDispatch();
+    const filter = useSelector((state) => state.filter);
 
     const [apartments, setApartments] = useState([]);
     const [loading, setLoading] = useState(true);
