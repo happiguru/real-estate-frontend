@@ -1,4 +1,8 @@
-import { LOAD_APARTMENTS, APARTMENT_DETAILS } from "../actionTypes";
+import {
+    LOAD_APARTMENTS,
+    APARTMENT_DETAILS,
+    FILTERED_APARTMENTS
+} from "../actionTypes";
 
 export const loadApartments = (apartments = []) => ({
     type: LOAD_APARTMENTS,
@@ -9,4 +13,9 @@ export const getApartmentDetails = (id = '', update = {}) => ({
     type: APARTMENT_DETAILS,
     id,
     update,
+});
+
+export const setFilter = (apartment_name = '') => ({
+    type: FILTERED_APARTMENTS,
+    apartment_name,
 });

@@ -1,2 +1,5 @@
 export const LOAD_APARTMENTS = 'LOAD_APARTMENTS';
 export const APARTMENT_DETAILS = 'APARTMENT_DETAILS';
+export const FILTERED_APARTMENTS = 'FILTERED_APARTMENTS';
+export const LOG_IN = 'LOG_IN';
+export const SET_USER = 'SET_USER';

@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import App from './components/App';
+import ApartmentItems from './containers/ApartmentItems';
+import ApartmentDetail from './components/ApartmentDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import reportWebVitals from './reportWebVitals';
 import store from './store/store';
 
 ReactDOM.render(
@@ -15,7 +17,8 @@ ReactDOM.render(
         <Header />
         <div className="container">
           <Switch>
-            <Route exact path="/" component={App} />
+            <Route exact path="/" component={ApartmentItems} />
+            <Route exact path="/:id" component={ApartmentDetail} />
           </Switch>
         </div>
         <Footer />
@@ -25,3 +28,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+reportWebVitals();
