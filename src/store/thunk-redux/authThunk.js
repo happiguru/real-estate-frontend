@@ -10,7 +10,7 @@ import {
   logoutUserSuccess,
 } from '../actions/actionCreators';
 
-const endPoint = 'https://real-estate-api-happi.herokuapp.com';
+const endPoint = 'https://young-ravine-73545.herokuapp.com';
 
 export const signupUserAsync = (user) => async (dispatch) => {
   dispatch(apiFetchStart());
