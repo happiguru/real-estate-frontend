@@ -10,7 +10,7 @@ import {
   logoutUserSuccess,
 } from '../actions/actionCreators';
 
-const endPoint = 'https://young-ravine-73545.herokuapp.com';
+const endPoint = 'http://127.0.0.1:3000';
 
 export const signupUserAsync = (user) => async (dispatch) => {
   dispatch(apiFetchStart());

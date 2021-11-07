@@ -10,7 +10,7 @@ import {
   addToRentsSuccess,
 } from '../actions/actionCreators';
 
-const endPoint = 'https://young-ravine-73545.herokuapp.com';
+const endPoint = 'http://127.0.0.1:3000';
 const token = JSON.parse(localStorage.getItem('authToken'));
 axios.defaults.headers.common.Authorization = token;
 
