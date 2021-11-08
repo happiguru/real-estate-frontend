@@ -5,7 +5,7 @@ import { StyledMenu } from './Menu.styled';
 /* eslint arrow-body-style: */
 const Menu = ({ open }) => {
   return (
-    <header style="margin-bottom: 4750px">
+    <header>
       <nav>
         <StyledMenu open={open}>
           <Link to="/">Home</Link>
