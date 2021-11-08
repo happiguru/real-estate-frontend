@@ -10,7 +10,7 @@ import {
   addToRentsSuccess,
 } from '../actions/actionCreators';
 
-const endPoint = 'http://127.0.0.1:3000';
+const endPoint = 'https://real-estate-api-happi.herokuapp.com';
 const token = JSON.parse(localStorage.getItem('authToken'));
 axios.defaults.headers.common.Authorization = token;
 
